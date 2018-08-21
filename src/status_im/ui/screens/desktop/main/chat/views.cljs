@@ -1,4 +1,3 @@
-
 (ns status-im.ui.screens.desktop.main.chat.views
   (:require-macros [status-im.utils.views :as views])
   (:require [re-frame.core :as re-frame]
@@ -20,7 +19,7 @@
             [status-im.ui.screens.desktop.main.chat.styles :as styles]
             [status-im.utils.contacts :as utils.contacts]
             [status-im.i18n :as i18n]
-            [screens.desktop.main.chat.events :as chat.events]))
+            [status-im.ui.screens.desktop.main.chat.events :as chat.events]))
 
 (views/defview toolbar-chat-view [{:keys [chat-id color public-key public? group-chat]
                                    :as current-chat}]

@@ -1,4 +1,4 @@
-(ns screens.desktop.main.chat.events
+(ns status-im.ui.screens.desktop.main.chat.events
   (:require [re-frame.core :as re-frame]
             [status-im.ui.screens.navigation :as navigation]
             [status-im.utils.handlers :as handlers]
