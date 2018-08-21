@@ -74,17 +74,12 @@
        [react/text {:style styles/author} name]])))
 
 (views/defview member-photo [from]
-<<<<<<< HEAD
   (letsubs [photo-path [:get-photo-path from]]
-    [react/image {:source {:uri (if (string/blank? photo-path)
-                                  (identicon/identicon from)
-                                  photo-path)}
-                  :style  styles/photo-style}]))
-=======
-  [react/touchable-highlight  {:on-press #(re-frame/dispatch [:show-profile-desktop from])}
-   [react/image {:source {:uri (identicon/identicon from)}
-                 :style  styles/photo-style}]])
->>>>>>> Now user profile can be opened from public chat
+    [react/touchable-highlight  {:on-press #(re-frame/dispatch [:show-profile-desktop from])}
+      [react/image {:source {:uri (if (string/blank? photo-path)
+                                    (identicon/identicon from)
+                                    photo-path)}
+                    :style  styles/photo-style}]]))
 
 (views/defview my-photo [from]
   (views/letsubs [account [:get-current-account]]
